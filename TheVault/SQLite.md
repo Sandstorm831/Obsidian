@@ -4,7 +4,7 @@
 	3. Solved by using Mutex type locking mechanisms but have to be implemented by yourself.
 	
 
-- Code
+- Python SQLite3 Code example
 	```python
 	# Standard syntax and their use
 	import sqlite3
@@ -43,3 +43,5 @@
 	# Close the connection
 	connection.close()
 	```
+
+- ***SQLite doesn't support multiple update operations in a single query***, you have to make multiple queries for that. If your queries doesn't have high latency, than, making multiple update queries isn't going to make much difference, use `executemany` from sqlite3 in python to make multiple queries, and commit at last.

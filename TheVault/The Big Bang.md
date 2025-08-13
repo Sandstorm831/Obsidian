@@ -5,3 +5,4 @@ The beginning of everything.
 - [Docker](Docker)
 - [SQLite](SQLite)
 - [PostgreSQL](PostgreSQL)
+- [Bash](Bourne_Again_SHell)

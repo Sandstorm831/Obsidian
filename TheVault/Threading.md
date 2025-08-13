@@ -39,3 +39,5 @@ is_locked.release()
 is_locked.locked() # returns True if lock is acquired
 ```
 
+- Threads can spawn `multiprocessing.Process` thus giving them ability to create highly nested flows of `threads` and `processes` running in parallel
+- 

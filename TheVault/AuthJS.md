@@ -1,0 +1,1 @@
+For some reason, AuthJS does't support non-edge-runtime based middlewares, which crates a problem for adding database adapters like postgres.

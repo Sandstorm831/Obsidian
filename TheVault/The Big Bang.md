@@ -6,3 +6,4 @@ The beginning of everything.
 - [SQLite](SQLite)
 - [PostgreSQL](PostgreSQL)
 - [Bash](Bourne_Again_SHell)
+- [Computer Science Fundamentals](CS_Fundamentals)

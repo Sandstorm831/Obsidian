@@ -7,3 +7,4 @@ The beginning of everything.
 - [PostgreSQL](PostgreSQL)
 - [Bash](Bourne_Again_SHell)
 - [Computer Science Fundamentals](CS_Fundamentals)
+- [Music](Music)

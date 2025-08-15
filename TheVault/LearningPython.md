@@ -4,6 +4,9 @@ Beginning of python learning
 - [Decorator](Decorator)
 - [PIL](Pillow)
 - [DateTime](DateTime)
+- [FastAPI](FastAPI)
+- [IO](io)
+- [Requests](requests)
 
 ---
 - `sort`

@@ -58,3 +58,5 @@ services:
         - POSTGRES_PASSWORD=postgres
 
 ```
+
+- You can share files between 2 containers by sharing the same volume between them

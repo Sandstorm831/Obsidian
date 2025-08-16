@@ -8,3 +8,4 @@ The beginning of everything.
 - [Bash](Bourne_Again_SHell)
 - [Computer Science Fundamentals](CS_Fundamentals)
 - [Music](Music)
+- [Linux](linux)

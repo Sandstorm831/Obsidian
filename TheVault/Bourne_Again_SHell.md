@@ -15,3 +15,16 @@
 	- `0` -> `stdin` -> standard_input file descriptor
 	- `1` -> `stdout` -> standard_output file descriptor
 	- `2` -> `stderr` -> standard_error file descriptor
+
+- Mount a external drive in the system
+	```bash
+$ lsblk -f # list all partitions and disk devices connected info
+# find name and filesystem-type (fstype) of external drive
+# you can identify yours by the label
+
+$ mkdir /media/<mount_folder> # if you don't already have one
+
+$ sudo mount -t <fstype> /dev/<name> /media/<mount_folder>
+	```
+	- `-t` -> tells the `file-system` type
+	- `/dev/<name>` -> Linux represent hardware as files and device files live in `/dev/`

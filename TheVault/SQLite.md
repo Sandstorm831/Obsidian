@@ -62,3 +62,20 @@
 	cursor.executemany("INSERT INTO movie VALUES(?, ?, ?)", data)
 	connection.commit()
 	```
+
+- row_factory method for getting result in a dict format
+	```python
+from sqlite3 import Cursor
+
+def dict_factory(cursor: Cursor, row):
+	fields = [col[0] for col in cursor.description] # list of field names in db
+	return {key: val for key, val in zip(fields, row)}
+	```
+	usage
+	```python
+	from src.dict_factory import dict_factory
+	import sqlite3
+	
+	conn = sqlite3.connect("path/to/db")
+	connection.row_factory = dict_factory
+	```

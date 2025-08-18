@@ -53,3 +53,5 @@ from decorator import decor
 def printer(name: str = "erlang"):
 	print(f"Hi, my name is {name}")
 ```
+
+- [Multiprocessing_decorator](Multiprocessing)

@@ -7,13 +7,15 @@ Beginning of python learning
 - [FastAPI](FastAPI)
 - [IO](io)
 - [Requests](requests)
+- [Multiprocessing](Multiprocessing)
+- [APScheduler](APScheduler)
 
 ---
 - `sort`
 ```python
 # To sort a an array containing complex objects
 # we can use key parameter, it takes a function
-# which will be called on each element before making
+# which will be called on e[ach element before making
 # comparison
 a = [("rg", 23), ("rgd", 2), ("at", 24)]
 a.sort(key=lambda elem: elem[1]) # sort the array by second elem of tuple

@@ -1,0 +1,3 @@
+- There are two main ports of an SMTP server `465` and `587` and both server different connection methodologies
+	- `465`: requires `SSL/TLS` connection **upfront** and will close the other type of connection
+	- `587`: requires `SSL/TLS` connection for any kind of communication, but it allows any normal connection to be upgraded to a `SSL/TLS` connection without closing it prematurely

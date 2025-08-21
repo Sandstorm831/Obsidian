@@ -10,6 +10,7 @@ Beginning of python learning
 - [Multiprocessing](Multiprocessing)
 - [APScheduler](APScheduler)
 - [Logging](Logging)
+- [Errors](error_handling)
 
 ---
 - `sort`
@@ -37,3 +38,31 @@ greet(*names) # unpacking of names list
 
 # hello  pi ,  dy ,  sy
 ```
+
+- find the module name of a `func` you can use `__module__` attributes
+	```python	
+def a_func():
+	print("the func")
+func_module_name = a_func.__module__
+	```
+	other useful attributes:
+
+
+| Type     | Attribute      | Description                                     |
+| -------- | -------------- | ----------------------------------------------- |
+| class    | `__name__`     | name with class is defined                      |
+|          | `__module__`   | name of the module in which class is defined    |
+|          | `__qualname__` | qualified name (includes the heirarchy/context) |
+| function | `__name__`     | name with which function is defined             |
+|          | `__qualname__` | qualified name (includes the heirarchy/context) |
+|          | `__module__`   | module name in which function is defined        |
+
+- in a python code, `__name__` gives the module of the file which is `__main__` if the file is run directly, and `module.submodule` if it's imported
+	```python
+def hello():
+	print("hell with your hello")
+
+if __name__ == '__main__':
+	hello()
+	```
+	this code will print the `text` only when it is run directly without any imports, if we import the function, the `hello()` function call inside `if` block, will not run.

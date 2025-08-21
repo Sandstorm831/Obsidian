@@ -36,23 +36,73 @@
             }
           },
           {
-            "id": "f8199c081d1c7095",
+            "id": "55ebd293905685c1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Software.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Software"
+            }
+          },
+          {
+            "id": "a00ca1443fd26cf6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "linux"
             }
           },
           {
             "id": "5b6ea54b82166bf7",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "toLearn.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "toLearn"
+            }
+          },
+          {
+            "id": "6bf8dd7f7af08378",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Multiprocessing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Multiprocessing"
+            }
+          },
+          {
+            "id": "1c071d3b8c994527",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Threading.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Threading"
             }
           },
           {
@@ -185,6 +235,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -194,7 +245,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for linux"
             }
           },
           {
@@ -268,17 +319,20 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "5b6ea54b82166bf7",
+  "active": "a00ca1443fd26cf6",
   "lastOpenFiles": [
-    "linux.md",
+    "toLearn.md",
     "Logging.md",
+    "linux.md",
+    "Multiprocessing.md",
+    "Software.md",
+    "LearningPython.md",
+    "error_handling.md",
+    "Threading.md",
+    "Bourne_Again_SHell.md",
     "Excalidraw/Drawing 2025-08-20 22.32.39.excalidraw.md",
     "Decorator.md",
-    "LearningPython.md",
-    "Multiprocessing.md",
     "Excalidraw",
-    "Software.md",
-    "Bourne_Again_SHell.md",
     "DateTime.md",
     "smtp_server.md",
     "APScheduler.md",
@@ -291,13 +345,10 @@
     "FastAPI.md",
     "Docker.md",
     "CS_Fundamentals.md",
-    "Threading.md",
     "PostgreSQL.md",
     "AuthJS.md",
     "Cursor.md",
     "Untitled.canvas",
-    "Learning/ Python.md",
-    "Learning",
-    "Learning/ Python 1.md"
+    "Learning"
   ]
 }

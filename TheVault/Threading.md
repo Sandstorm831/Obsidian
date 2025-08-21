@@ -40,4 +40,10 @@ is_locked.locked() # returns True if lock is acquired
 ```
 
 - Threads can spawn `multiprocessing.Process` thus giving them ability to create highly nested flows of `threads` and `processes` running in parallel
-- 
+
+- If a `lock` is `acquired` then use the `try ... finally` block to `release` the `lock` otherwise, in an error situation, there might be a case when `lock` is not released
+
+- errors from `thread` are not propagated to the `main thread`. If you have to manage threads there are few options I thought for it:
+	- `manager decorator`: define a manager decorator that will handle all the logic for handling errors and paste it on top of the `target` function
+	- `subclass threading.Thread`: you can create a `subclass` inheriting from `threading.Thread` and override the `run` function according to your needs
+	- `Queue`: propagate the error using queues and catch

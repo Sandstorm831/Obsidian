@@ -1,0 +1,2 @@
+- Commands
+	- `sed`, `awk`, `grep`, `find`, `systemctl`, `lsof`

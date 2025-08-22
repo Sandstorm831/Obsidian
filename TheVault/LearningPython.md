@@ -66,3 +66,6 @@ if __name__ == '__main__':
 	hello()
 	```
 	this code will print the `text` only when it is run directly without any imports, if we import the function, the `hello()` function call inside `if` block, will not run.
+
+- `sys.exit(0)` -> it raises a `SystemExit` exception which inherits from `BaseException` instead of `Exception` and you should not try to catch this as it indicates to exit the program.
+	- `os._exit(0)` -> In a multi-threaded application, `sys.exit(0)` raised in a thread leads to extermination of thread not the whole program, because it's just and exception after all, `os._exit(0)` solves that, but `multiprocessing.Process` still won't exit by `os._exit(0)`

@@ -1,4 +1,6 @@
 
+- [Networks](Networks)
+
 | **Subject**                    | **Why study?**                                                                                                                                   | **Book**                                                    | **Videos**                        |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- | --------------------------------- |
 | Programming                    | Don’t be the person who “never quite understood” something like recursion.                                                                       | *Structure and Interpretation of Computer Programs*         | Brian Harvey’s Berkeley CS 61A    |

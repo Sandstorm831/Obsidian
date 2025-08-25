@@ -11,7 +11,7 @@ Beginning of python learning
 - [APScheduler](APScheduler)
 - [Logging](Logging)
 - [Errors](error_handling)
-
+- [Interfaces](interfaces)
 ---
 - `sort`
 ```python

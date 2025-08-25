@@ -25,10 +25,28 @@
             "id": "7485e4ebc8dd98aa",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "LearningPython.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LearningPython"
+            }
+          },
+          {
+            "id": "e39f475ad71a426d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FastAPI.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "FastAPI"
             }
           },
           {
@@ -142,7 +160,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -215,6 +233,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "FastAPI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -224,7 +243,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for FastAPI"
             }
           },
           {
@@ -298,17 +317,25 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "7485e4ebc8dd98aa",
+  "active": "e39f475ad71a426d",
   "lastOpenFiles": [
+    "interfaces.md",
+    "LearningPython.md",
+    "io.md",
+    "Pillow.md",
+    "requests.md",
+    "FastAPI.md",
+    "Excalidraw/TCP_congestion_control.excalidraw.md",
+    "toLearn.md",
+    "Multiprocessing.md",
+    "Threading.md",
+    "Bourne_Again_SHell.md",
+    "Software.md",
+    "Logging.md",
     "Networks.md",
     "Excalidraw/Network_GBN_sender.excalidraw.md",
-    "Multiprocessing.md",
-    "Excalidraw/TCP_congestion_control.excalidraw.md",
-    "LearningPython.md",
     "Excalidraw/Network_GBN_receiver.excalidraw.md",
     "Excalidraw/Network_TCP_sender.excalidraw.md",
-    "Software.md",
-    "toLearn.md",
     "CS_Fundamentals.md",
     "Excalidraw",
     "Untitled.canvas",
@@ -316,18 +343,10 @@
     "error_handling.md",
     "APScheduler.md",
     "linux.md",
-    "Logging.md",
-    "Threading.md",
-    "Bourne_Again_SHell.md",
     "Excalidraw/Drawing 2025-08-20 22.32.39.excalidraw.md",
     "Decorator.md",
     "DateTime.md",
     "smtp_server.md",
-    "io.md",
-    "SQLite.md",
-    "Music.md",
-    "requests.md",
-    "Pillow.md",
     "Learning"
   ]
 }

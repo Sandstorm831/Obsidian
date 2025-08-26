@@ -69,3 +69,12 @@ if __name__ == '__main__':
 
 - `sys.exit(0)` -> it raises a `SystemExit` exception which inherits from `BaseException` instead of `Exception` and you should not try to catch this as it indicates to exit the program.
 	- `os._exit(0)` -> In a multi-threaded application, `sys.exit(0)` raised in a thread leads to extermination of thread not the whole program, because it's just and exception after all, `os._exit(0)` solves that, but `multiprocessing.Process` still won't exit by `os._exit(0)`
+
+- `Annotated` adds additional metadata to a `type`
+	```python
+from typing import Annotated
+X = Annotated[int, "imp_metadata]
+print(X)
+typing.Annotated[int, 'imp_metadata']
+	```
+	This is used heavily in `FastAPI`, they add all the `dependency injection` using this metadata, it's stored in `__metadata__` attribute.

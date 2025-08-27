@@ -32,4 +32,13 @@ curr_utc_datetime = datetime.now(timezone.utc)
 	datetime.now(IST).isoformat(timespec="seconds")
 	# '2025-08-16T01:17:22+05:30'
 	```
-	
+
+- To convert a `datetime` from one timezone to another
+```python
+utc_dt = datetime.now(timezone.utc)
+#  datetime.datetime(2025, 8, 27, 14, 29, 12, 34306, tzinfo=datetime.timezone.utc)
+
+ist_tz = ZoneInfo("Asia/Kolkata")
+ist_dt = utc_dt.astimezone(ist_tz)
+#  datetime.datetime(2025, 8, 27, 19, 59, 12, 34306, tzinfo=zoneinfo.ZoneInfo(key='Asia/Kolkata'))
+```

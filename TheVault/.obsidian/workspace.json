@@ -53,12 +53,24 @@
             "id": "709db34c2b5d72a9",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/TCP_congestion_control.excalidraw.md"
+                "file": "LearningPython.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "TCP_congestion_control.excalidraw"
+              "icon": "lucide-file",
+              "title": "LearningPython"
+            }
+          },
+          {
+            "id": "c5cfa5aa1069c136",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -160,7 +172,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -217,7 +229,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "39f49203394ecc35",
@@ -233,7 +246,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FastAPI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -243,7 +255,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for FastAPI"
+              "title": "Backlinks"
             }
           },
           {
@@ -303,7 +315,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -317,22 +330,24 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e39f475ad71a426d",
+  "active": "c5cfa5aa1069c136",
   "lastOpenFiles": [
+    "requests.md",
+    "dataclasses.md",
     "LearningPython.md",
+    "toLearn.md",
+    "Networks.md",
+    "DateTime.md",
+    "Threading.md",
     "FastAPI.md",
+    "Excalidraw/TCP_congestion_control.excalidraw.md",
     "interfaces.md",
     "io.md",
     "Pillow.md",
-    "requests.md",
-    "Excalidraw/TCP_congestion_control.excalidraw.md",
-    "toLearn.md",
     "Multiprocessing.md",
-    "Threading.md",
     "Bourne_Again_SHell.md",
     "Software.md",
     "Logging.md",
-    "Networks.md",
     "Excalidraw/Network_GBN_sender.excalidraw.md",
     "Excalidraw/Network_GBN_receiver.excalidraw.md",
     "Excalidraw/Network_TCP_sender.excalidraw.md",
@@ -345,8 +360,6 @@
     "linux.md",
     "Excalidraw/Drawing 2025-08-20 22.32.39.excalidraw.md",
     "Decorator.md",
-    "DateTime.md",
-    "smtp_server.md",
     "Learning"
   ]
 }

@@ -12,6 +12,7 @@ Beginning of python learning
 - [Logging](Logging)
 - [Errors](error_handling)
 - [Interfaces](interfaces)
+- [DataClass](dataclasses)
 ---
 - `sort`
 ```python

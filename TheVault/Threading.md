@@ -47,3 +47,55 @@ is_locked.locked() # returns True if lock is acquired
 	- `manager decorator`: define a manager decorator that will handle all the logic for handling errors and paste it on top of the `target` function
 	- `subclass threading.Thread`: you can create a `subclass` inheriting from `threading.Thread` and override the `run` function according to your needs
 	- `Queue`: propagate the error using queues and catch
+
+- If you have a lot of short-lived tasks which is **not** compute intensive and primarily IO-bound, and you don't want to have explicit control over each thread, then go with `ThreadPoolExecutor`
+	```python
+from concurrent.futures import ThreadPoolExecutor
+from time import sleep
+
+executor = ThreadPoolExecutor(max_workers = 5, thread_name_prefix = "pool_")
+
+def sleeping(i):
+	sleep(i)
+	print(f"I slept {i}")
+
+if __name__ == "__main__":
+	executor.submit(sleeping, 5)
+	executor.submit(sleeping, 4)
+	executor.submit(sleeping, 6)
+	executor.submit(sleeping, 2)
+	executor.submit(sleeping, 9)
+	
+	```
+	here, if more than tasks are assigned then the number of threads, the the tasks are queued and will be allocated as soon as a new thread becomes available, as you can see in following example
+	```python
+def printer(i):  
+	print("I am starting: ", i)  
+    sleep(i)  
+    print("I slept: ", i)
+   
+executor = ThreadPoolExecutor(max_workers = 3)
+for i in range(2,8):
+	executor.submit(printer,i)
+
+####### result
+# I am starting:  2  
+# <Future at 0x792ccb0983e0 state=running>  
+# I am starting:  3  
+# <Future at 0x792cccabe930 state=running>  
+# I am starting:  4  
+# <Future at 0x792ccb075d60 state=running>  
+# <Future at 0x792ccb075af0 state=pending>  
+# <Future at 0x792ccb075880 state=pending>  
+# <Future at 0x792ccb0758b0 state=pending>  
+# I slept:  2  
+# I am starting:  5  
+# I slept:  3  
+# I am starting:  6  
+# I slept:  4  
+# I am starting:  7  
+# I slept:  5  
+# I slept:  6  
+# I slept:  7
+	```
+	

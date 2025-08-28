@@ -80,6 +80,5 @@ CMD [ "python3", "coddes.py" ]
 
 - command to build the image
 ```bash
-docker build -t <name_of_image>
+docker build -t <name_of_image> .
 ```
-

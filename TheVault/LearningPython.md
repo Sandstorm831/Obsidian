@@ -13,6 +13,8 @@ Beginning of python learning
 - [Errors](error_handling)
 - [Interfaces](interfaces)
 - [DataClass](dataclasses)
+- [PathLib](pathlib)
+- [Closures](closures)
 ---
 - `sort`
 ```python

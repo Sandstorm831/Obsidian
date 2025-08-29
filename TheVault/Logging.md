@@ -114,6 +114,7 @@ def setup_main_logging(multi_proc_queue):
 	listener = QueueListener(
 		multi_proc_uque,
 		*handlers,
+		respect_handler_level=True   # IMPORTANT
 	)
 	# when a message is put into queue, listener will dispatch 
 	# that message to all the handlers

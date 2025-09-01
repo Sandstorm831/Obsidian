@@ -98,4 +98,6 @@ for i in range(2,8):
 # I slept:  6  
 # I slept:  7
 	```
-	
+
+- Sometimes the `threads` can interfere with each other if the other thread throw some `uncaught exception`, `GIL issue`
+- Try not to start threads in the Global space, but only inside functions so that they don't start abruptly when it's not intended

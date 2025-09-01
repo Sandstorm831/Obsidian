@@ -82,3 +82,5 @@ CMD [ "python3", "coddes.py" ]
 ```bash
 docker build -t <name_of_image> .
 ```
+
+- To dynamically change the container code, mount your `src` directory as to the container `src` directory using `volumes`

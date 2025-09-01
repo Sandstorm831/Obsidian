@@ -60,3 +60,8 @@ services:
 ```
 
 - You can share files between 2 containers by sharing the same volume between them
+- To restart a service of a docker compose running setup
+```bash
+docker compose restart <name_of_service>
+```
+- `hostname`: declares a custom host name for the service container to use

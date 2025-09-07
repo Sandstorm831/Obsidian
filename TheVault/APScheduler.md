@@ -36,3 +36,31 @@ func listener(event: JobExecutionEvent):
 scheduler.add_listener(listener, mask = EVENT_JOB_ERROR)
 	```
 	The scheduler will not stop the schedule until you call `scheduler.shutdown()` on the scheduler
+
+- If you want to kill the jobs that were running from the last time till now, it's not explicitly provided, so we improvise
+```python
+### somfile.py
+from multiprocessing import Queue
+QueueStore = Queue()
+
+
+### main.py
+from somefile import QueueStore
+from somemodule import func
+import os
+import signal
+
+def schedule_cancellable_job(an-arg):
+	global QueueStore # it is a multiprocessing.Queue that you import
+	if not QueueStore.empty():
+		pid = QueueStore.get()
+		try:
+			os.kill(pid, signal.SIGKILL)
+		except ProcessLookupError as _:
+			pass
+		
+	process = multiprocessing.Process(target=func, args=(an-arg,))
+	process.start()
+	QueueStore.put(process.pid)
+	process.join()
+```

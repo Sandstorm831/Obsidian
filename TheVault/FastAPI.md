@@ -107,3 +107,36 @@ async def handler(
 		"status": "success",
 	}
 ```
+
+- Adding middlewares in FastAPI
+```python
+### middleware.py
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
+from starlette.response import Response
+import time
+
+class XMiddleware(BaseHTTPMiddleware):
+	async def dipatch(self, request: Request, call_next):
+		# request while going to server block
+		if request.url.path.startswith("/your/path"):
+			# do whatever you want
+		start_time = time.perf_counter()
+		response = await call_next(request)
+		# response going back to the client block
+		process_time = time.perf_counter() - start_time
+		reponse.headers[X-Processing-time] = str(process_time)
+		return response
+
+### main.py
+# other code
+
+from middleware import XMiddleware
+from somewhere import aRouter
+
+app = fastapi()
+app.add_middleware(XMiddleware)
+app.include_router(aRouter)
+
+# other code
+```

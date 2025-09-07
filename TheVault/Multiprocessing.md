@@ -25,3 +25,21 @@ def multi_proc(func):
 	return wrapper
 	```
 	the `ipc_queue` can only contain `serialisable` elements
+
+- I don't know much about this issue, but I faced it so I am writing it here, there can be a case when you are trying to start the `Process` and at the same time, at some place of your code, it tries to write to `stdout` channel, then, there is a chance of a race-condition and following error might bubble
+	```bash
+reentrant call inside <_io.BufferedWriter name='<stdout>'>
+	```
+	In such scenarios, wrap the `Process.start()` in a `try-except` block like this, also mark initialisation in `try-except` block only.
+```python
+from time import sleep
+
+while True:
+	try:
+		proc = multiprocessing.Process(target=func)
+		proc.start()
+		break
+	except RuntimeError as e:
+		sleep(0.1)
+		continue
+```

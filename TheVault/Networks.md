@@ -10,3 +10,4 @@
 | 502         | bad gateway, a server acting as a gateway or proxy received an invalid response from an upstream server                   |
 | 503         | service unavailable, server is temporarily unable to handle the request due to being overloaded or undergoing maintanence |
 | 504         | gateway timeout, a server acting as a gateway or proxy didn't receive a timely response from upstream server              |
+| 401         | Unauthorised                                                                                                              |

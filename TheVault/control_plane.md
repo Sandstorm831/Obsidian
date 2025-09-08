@@ -1,6 +1,6 @@
 - Link State (LS) Routing algorithm (centralised algorithm)
 	In this, every router have the data of all the nodes, links and cost of each of the link in the network, and using this information, it calculates the shortest distance from the current source node to every other node using `Dijkstra's algorithm`
-	- `D(v)`: cost of the least-cost path from the source node to node `v` as of this iteration of the algorithtm
+	- `D(v)`: cost of the least-cost path from the source node to node `v` as of this iteration of the algorithm
 	- `p(v)`: previous node (neighbour of `v`) along the current least-cost path from source to node `v`
 	- `N'`: subset of nodes, `v` is in `N'` if the least-cost path from source to v is definitively known
 	- c(u,v): if v is neighbour of u, this value would be the link cost between them, otherwise it will be inf

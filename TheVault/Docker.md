@@ -84,3 +84,12 @@ docker build -t <name_of_image> .
 ```
 
 - To dynamically change the container code, mount your `src` directory as to the container `src` directory using `volumes`
+
+- To share your `docker image` without uploading it anywhere, you can get a `.tar` file and then load the tar file in other location
+```bash
+# saving image
+docker save -o my_image.tar my_image
+
+# loading image
+docker load -i my_image.tar
+```

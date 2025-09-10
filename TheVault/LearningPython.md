@@ -81,3 +81,11 @@ print(X)
 typing.Annotated[int, 'imp_metadata']
 	```
 	This is used heavily in `FastAPI`, they add all the `dependency injection` using this metadata, it's stored in `__metadata__` attribute.
+
+- to check types, use `isinstance`
+```python
+x = "hello"
+print(isinstance(x, str)) # True
+print(isinstance(x, object)) # True
+print(isinstance(x,tuple)) # False
+```

@@ -65,3 +65,10 @@ services:
 docker compose restart <name_of_service>
 ```
 - `hostname`: declares a custom host name for the service container to use
+
+- `environment variables` passed through docker compose takes precedence over other process `environment variables` with the same name, as they are passed first to the process, but, if `overwriting` is allowed than docker-compose `environment variables` can be overwritten, you can read more [here](environement_variables)
+
+- To run a command in a service container, you can use
+```bash
+docker compose exec <service_name> <command>
+```

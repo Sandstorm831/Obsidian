@@ -11,3 +11,4 @@ The beginning of everything.
 - [Linux](linux)
 - [SMTP_Server](smtp_server)
 - [to_learn](toLearn)
+- [[environement_variables]]

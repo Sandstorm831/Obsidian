@@ -12,3 +12,19 @@ The beginning of everything.
 - [SMTP_Server](smtp_server)
 - [to_learn](toLearn)
 - [[environement_variables]]
+
+
+- `base64` is used to turn binary data into `ASCII` characters, it uses
+```
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
++/
+```
+	it also use = as padding at the end
+- `base64` is not `url` safe due to characters `+` & `/` and padding `=`, thus `base64url` changes are made such that
+```
++ -> -
+/ -> _
+=(padding) -> removed
+```

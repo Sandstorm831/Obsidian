@@ -15,6 +15,7 @@ Beginning of python learning
 - [DataClass](dataclasses)
 - [PathLib](pathlib)
 - [Closures](closures)
+- [Cryptography](cryptography)
 ---
 - `sort`
 ```python

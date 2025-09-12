@@ -1,0 +1,5 @@
+- `SATA` is an interface, that is, it connects an external storage device to the computer. It's mostly called `SATA` ports, as, an interface is usually port where you plugin your device. Therefore `SATA SSDs` are `SSDs` which have `SATA` ports.
+- `M.2` is a specification, and is formerly known as `next generation form factor (NGFF)`, this specification support various interfaces like `NVMe`, `SATA`, `PCIe`
+- `NVMe` is a an interface specification, it stands for `Non Volatile Memory express` and it's also a protocol, that is, `NVMe` is itself a protocol inside `NVMe` specification. `NVMe` protocol is faster as compared to the `AHCI`(Advanced host controller interface) protocol used in `SATA` ports.
+- `PCIe` is standard of for connecting high-speed components inside computer, now it can give rise `PCIe` interfaces 
+- M.2 specify different keyed sots. Generally, `M.2 NVMe SSDs` are M-keyed and are incompatible with `SATA` ports![[images/M2_Edge_Connector_Keying.svg]]

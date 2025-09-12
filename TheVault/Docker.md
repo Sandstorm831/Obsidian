@@ -93,3 +93,20 @@ docker save -o my_image.tar my_image
 # loading image
 docker load -i my_image.tar
 ```
+
+- To get just the ids of running containers, use flag `-q`
+```bash
+docker ps -q
+```
+- to remove all containers
+```bash
+docker rm $(docker ps -qa)
+```
+- to remove all images
+```bash
+docker image rm $(docker image ls -q)
+```
+- to remove all volumes
+```bash
+docker volume rm $(docker volums ls -q)
+```

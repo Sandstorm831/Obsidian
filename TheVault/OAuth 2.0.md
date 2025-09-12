@@ -19,4 +19,4 @@ It's not necessary that you get a refresh token along side a new access token.
 
 - `OAuth 2.0` flow have 4 grant types, but mostly we would be concerning with **primarily** two grant-types, 
 	- `Authorization code` ![[OAuth2.0_authorization_code_flow.excalidraw]]
-	- `Implicit`
+	- `Implicit`![[OAuth2.0_implicit_flow.excalidraw]]

@@ -12,7 +12,7 @@ The beginning of everything.
 - [SMTP_Server](smtp_server)
 - [to_learn](toLearn)
 - [[environement_variables]]
-
+- [[OAuth 2.0]]
 
 - `base64` is used to turn binary data into `ASCII` characters, it uses
 ```

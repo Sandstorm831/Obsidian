@@ -95,12 +95,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OAuth 2.0.md",
+                "file": "Software.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OAuth 2.0"
+              "title": "Software"
+            }
+          },
+          {
+            "id": "17c742e17bee24a5",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -109,10 +119,10 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/Drawing 2025-09-12 19.52.13.excalidraw.md"
+                "file": "Excalidraw/OAuth2.0_implicit_flow.excalidraw.md"
               },
               "icon": "excalidraw-icon",
-              "title": "Drawing 2025-09-12 19.52.13.excalidraw"
+              "title": "OAuth2.0_implicit_flow.excalidraw"
             }
           },
           {
@@ -140,7 +150,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -213,7 +223,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2025-09-12 19.52.13.excalidraw.md",
+                "file": "Software.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,7 +233,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Drawing 2025-09-12 19.52.13.excalidraw"
+              "title": "Backlinks for Software"
             }
           },
           {
@@ -297,19 +307,19 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "d27a56265a14ea9e",
+  "active": "4f3b1e8d54aebde7",
   "lastOpenFiles": [
+    "OAuth 2.0.md",
+    "Software.md",
+    "Excalidraw/OAuth2.0_implicit_flow.excalidraw.md",
     "Excalidraw/OAuth2.0_authorization_code_flow.excalidraw.md",
-    "Excalidraw/Drawing 2025-09-12 19.52.13.excalidraw.md",
     "Excalidraw/OAuth2.0_refresh_token_flow.excalidraw.md",
     "Single_Board_Computers.md",
-    "OAuth 2.0.md",
     "Excalidraw/OAuth2.0_general_flow.excalidraw.md",
     "cryptography.md",
     "ECC.md",
     "storage.md",
     "LearningPython.md",
-    "Software.md",
     "Hardware.md",
     "Single.md",
     "Docker.md",

@@ -16,6 +16,7 @@ Beginning of python learning
 - [PathLib](pathlib)
 - [Closures](closures)
 - [Cryptography](cryptography)
+- [[Streamlit]]
 ---
 - `sort`
 ```python

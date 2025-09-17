@@ -95,12 +95,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software.md",
+                "file": "LearningPython.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Software"
+              "title": "LearningPython"
+            }
+          },
+          {
+            "id": "214dfded4fd29560",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -150,7 +160,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -223,7 +233,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -233,7 +242,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Software"
+              "title": "Backlinks"
             }
           },
           {
@@ -307,10 +316,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "4f3b1e8d54aebde7",
+  "active": "214dfded4fd29560",
   "lastOpenFiles": [
-    "OAuth 2.0.md",
+    "Streamlit.md",
+    "LearningPython.md",
     "Software.md",
+    "OAuth 2.0.md",
     "Excalidraw/OAuth2.0_implicit_flow.excalidraw.md",
     "Excalidraw/OAuth2.0_authorization_code_flow.excalidraw.md",
     "Excalidraw/OAuth2.0_refresh_token_flow.excalidraw.md",
@@ -319,7 +330,6 @@
     "cryptography.md",
     "ECC.md",
     "storage.md",
-    "LearningPython.md",
     "Hardware.md",
     "Single.md",
     "Docker.md",
@@ -337,7 +347,6 @@
     "Bourne_Again_SHell.md",
     "linux.md",
     "FastAPI.md",
-    "CS_Fundamentals.md",
     "Excalidraw",
     "Untitled.canvas",
     "Learning"

@@ -30,3 +30,8 @@ st.button(
 	disabled=st.state_session.is_locked # checks if disabled
 )
 ```
+- To start the server, you use 
+```python
+python3 -m streamlit run ./path/to/streamlit.py
+```
+

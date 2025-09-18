@@ -17,6 +17,9 @@ Beginning of python learning
 - [Closures](closures)
 - [Cryptography](cryptography)
 - [[Streamlit]]
+- [[dotenv]]
+- [[json]]
+- [[subprocess]]
 ---
 - `sort`
 ```python

@@ -1,6 +1,6 @@
 - So here I am presenting a complete step-by-step process for writing a complete unattended installation of `ubuntu 24` LTS version. There's not much explanation but it's mostly because I don't want to get into it. 
 - You can go through these two blogs one by one to understand the details at some level [1](https://medium.com/@Phoenixforge/getting-your-feet-wet-with-ubuntu-autoinstall-e2c012454a37) [2](https://medium.com/@Phoenixforge/diving-deeper-with-ubuntu-autoinstall-b15e5bdffbb5)
-- Also, Here's the [official Ubuntu autoinstall docs](https://canonical-subiquity.readthedocs-hosted.com/en/latest/intro-to-autoinstall.html), and [autoinstall reference](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html)
+- Also, Here's the [official Ubuntu autoinstall docs](https://canonical-subiquity.readthedocs-hosted.com/en/latest/intro-to-autoinstall.html), and [autoinstall reference](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html) and [Clout-init docs](https://cloudinit.readthedocs.io/en/latest/tutorial/index.html)
 ----
 1. Have at least 100 GB of empty space in your OS, and this whole setup is based from Ubuntu only.
 2. Download `Ubuntu 24.04 LTS` desktop version from official ubuntu website

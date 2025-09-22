@@ -1,3 +1,4 @@
+- [[autoinstall]]
 
 | Common Filesystems | Mount tool or command |
 | :----------------: | --------------------: |

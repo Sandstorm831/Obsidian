@@ -4,20 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "6d2c0f496e1daa0e",
+        "id": "c021c079ce65fd28",
         "type": "tabs",
         "children": [
           {
-            "id": "833aab7802ce5b16",
+            "id": "530ad6e5357d8541",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "linux.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "linux"
+            }
+          },
+          {
+            "id": "60c5b40b4bde565f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "autoinstall.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "autoinstall"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "autoinstall.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for autoinstall"
             }
           },
           {
@@ -173,8 +193,34 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "833aab7802ce5b16",
+  "active": "60c5b40b4bde565f",
   "lastOpenFiles": [
+    "images/QEMU_setup_9.png",
+    "images/QEMU_setup_8.png",
+    "images/QEMU_setup_7.png",
+    "images/QEMU_setup_6.png",
+    "images/QEMU_setup_5.png",
+    "images/QEMU_setup_4.png",
+    "images/QEMU_setup_3.png",
+    "images/QEMU_setup_2.png",
+    "images/QEMU_setup_1.png",
+    "images/Cubic_Finish_Page.png",
+    "images/Unconfirmed 587021.crdownload",
+    "images/Cubic_Generate_Page.png",
+    "images/Unconfirmed 2295.crdownload",
+    "images/Unconfirmed 624057.crdownload",
+    "images/Unconfirmed 591116.crdownload",
+    "images/Unconfirmed 901533.crdownload",
+    "images/Unconfirmed 393301.crdownload",
+    "images/Unconfirmed 21425.crdownload",
+    "images/Unconfirmed 50448.crdownload",
+    "images/Unconfirmed 581158.crdownload",
+    "images/Unconfirmed 309163.crdownload",
+    "autoinstall.md",
+    "linux.md",
+    "Excalidraw/Network_BGP_hot_potato_routing.excalidraw.md",
+    "Bourne_Again_SHell.md",
+    "Software.md",
     "Excalidraw/OAuth2.0_refresh_token_flow.excalidraw.md",
     "Excalidraw/Drawing 2025-09-18 18.09.00.excalidraw.md",
     "Excalidraw/OAuth2.0_authorization_code_flow.excalidraw.md",
@@ -188,24 +234,13 @@
     "Excalidraw/OAuth2.0_general_flow.excalidraw.md",
     "subprocess.md",
     "Streamlit.md",
-    "linux.md",
-    "Software.md",
     "OAuth 2.0.md",
     "ECC.md",
     "Hardware.md",
     "Single.md",
     "Docker.md",
-    "images/M2_Edge_Connector_Keying.svg",
-    "images",
-    "M2_Edge_Connector_Keying.svg",
     "Networks.md",
     "Excalidraw/Network_BGP_router_advertising.excalidraw.md",
-    "Excalidraw/Network_BGP_hot_potato_routing.excalidraw.md",
-    "environement_variables.md",
-    "network_layer.md",
-    "Docker_Compose.md",
-    "Excalidraw",
-    "Untitled.canvas",
-    "Learning"
+    "Untitled.canvas"
   ]
 }

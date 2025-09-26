@@ -18,6 +18,4 @@ readable_public_key = public_key.public_bytes(
 	serialization.Encoding.PEM,
 	serialization.PublicFormat.SubjectPublicKeyInfo # std container for pub key
 ).decode()
-
-
 ```

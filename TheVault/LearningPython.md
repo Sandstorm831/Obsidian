@@ -20,6 +20,7 @@ Beginning of python learning
 - [[dotenv]]
 - [[json]]
 - [[subprocess]]
+- [[hashlib]]
 ---
 - `sort`
 ```python

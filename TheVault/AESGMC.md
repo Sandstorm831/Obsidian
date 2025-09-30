@@ -1,11 +1,11 @@
 Code to encrypt and de-crypt using `AESGCC`
-- encription
+- encryption
 ```python
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 import os, base64, dotenv
 
 
-env_path = "./.env"
+env_path = ".env"
 raw_env = dotenv.dotenv_values(dotenv_path=env_path)
 key = os.urandom(32)
 b64_key = base64.b64encode(key).decode()
@@ -38,7 +38,7 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 import base64, dotenv, os
 
   
-env_path = "./.env"
+env_path = ".env"
 raw_env = dotenv.dotenv_values(dotenv_path=env_path)
 boxenv_path = "/env/box.env"
 raw_key = dotenv.dotenv_values(dotenv_path=boxenv_path).get("AESGCM_KEY")

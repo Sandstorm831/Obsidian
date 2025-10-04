@@ -97,12 +97,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hashlib.md",
+                "file": "Networks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "hashlib"
+              "title": "Networks"
+            }
+          },
+          {
+            "id": "2b0626d5b3a3828b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Link_Layer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Link_Layer"
+            }
+          },
+          {
+            "id": "a2eb6d534855fa90",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "control_plane.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "control_plane"
+            }
+          },
+          {
+            "id": "cfaa65df8e25d9eb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "data_plane.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "data_plane"
             }
           },
           {
@@ -120,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -193,7 +235,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "hashlib.md",
+                "file": "Link_Layer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +245,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for hashlib"
+              "title": "Backlinks for Link_Layer"
             }
           },
           {
@@ -277,9 +319,20 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "644e618ffe4589f0",
+  "active": "2b0626d5b3a3828b",
   "lastOpenFiles": [
+    "images/Network_link_layer_data_center_highly_interconnected_network.png",
+    "images/Network_link_layer_data_center_network.png",
+    "Excalidraw/Drawing 2025-10-04 18.14.13.excalidraw.md",
+    "Link_Layer.md",
+    "Wireless_and_Mobile_Network.md",
+    "Networks.md",
+    "().md",
+    "control_plane.md",
+    "network_layer.md",
+    "data_plane.md",
     "hashlib.md",
+    "Untitled.canvas",
     "LearningPython.md",
     "JSON_Web_Token_JWT.md",
     "Authentication_and_Authorization.md",
@@ -307,7 +360,6 @@
     "images/QEMU_setup_4.png",
     "images/QEMU_setup_3.png",
     "images/QEMU_setup_2.png",
-    "images/QEMU_setup_1.png",
     "images/Unconfirmed 587021.crdownload",
     "images/Unconfirmed 2295.crdownload",
     "images/Unconfirmed 624057.crdownload",
@@ -315,16 +367,6 @@
     "images/Unconfirmed 901533.crdownload",
     "Excalidraw/Network_BGP_hot_potato_routing.excalidraw.md",
     "Bourne_Again_SHell.md",
-    "Excalidraw/OAuth2.0_refresh_token_flow.excalidraw.md",
-    "Excalidraw/Drawing 2025-09-18 18.09.00.excalidraw.md",
-    "Excalidraw/OAuth2.0_authorization_code_flow.excalidraw.md",
-    "Excalidraw/OAuth2.0_implicit_flow.excalidraw.md",
-    "dotenv.md",
-    "json.md",
-    "Single_Board_Computers.md",
-    "storage.md",
-    "Excalidraw/OAuth2.0_general_flow.excalidraw.md",
-    "subprocess.md",
-    "Untitled.canvas"
+    "Excalidraw/OAuth2.0_refresh_token_flow.excalidraw.md"
   ]
 }

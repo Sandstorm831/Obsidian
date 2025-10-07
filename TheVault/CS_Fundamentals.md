@@ -13,3 +13,6 @@
 | Languages and Compilers        | If you understand how languages and compilers actually work, you’ll write better code and learn new languages more easily.                       | *Crafting Interpreters*                                     | Alex Aiken’s course on edX        |
 | Distributed Systems            | These days, most systems are distributed systems.                                                                                                | *Designing Data-Intensive Applications* by Martin Kleppmann | MIT 6.824                         |
 more details [here](https://teachyourselfcs.com/)
+
+- [Distributed System Lecture MIT](https://www.youtube.com/playlist?list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB)
+- 

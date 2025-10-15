@@ -4,81 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c021c079ce65fd28",
+        "id": "e77541c008fd466f",
         "type": "tabs",
         "children": [
           {
-            "id": "1ca91f1649ba5dc5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CS_Fundamentals.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CS_Fundamentals"
-            }
-          },
-          {
-            "id": "b99c8a5dda13930a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Text Emojis.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Text Emojis"
-            }
-          },
-          {
-            "id": "709b013ca42e681f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "cryptography.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "cryptography"
-            }
-          },
-          {
-            "id": "8a4f997b57998f11",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Software"
-            }
-          },
-          {
-            "id": "34cda1a8b44205a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Authentication_and_Authorization.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Authentication_and_Authorization"
-            }
-          },
-          {
-            "id": "59be6920b8c5ab44",
+            "id": "31d7e3cf9f086987",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -92,119 +22,21 @@
             }
           },
           {
-            "id": "644e618ffe4589f0",
+            "id": "ec2a9d7e3ddf265a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networks.md",
+                "file": "importlib.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Networks"
-            }
-          },
-          {
-            "id": "2b0626d5b3a3828b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Software"
-            }
-          },
-          {
-            "id": "f780ff5be5d7e495",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Github.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Github"
-            }
-          },
-          {
-            "id": "a2eb6d534855fa90",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "control_plane.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "control_plane"
-            }
-          },
-          {
-            "id": "cfaa65df8e25d9eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Github.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Github"
-            }
-          },
-          {
-            "id": "4a12d2c32958087c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Docker.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Docker"
-            }
-          },
-          {
-            "id": "0322e0c0d9cc00d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "WatchTower.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "WatchTower"
-            }
-          },
-          {
-            "id": "b64a35beb5cf6a36",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ECC.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ECC"
+              "title": "importlib"
             }
           }
         ],
-        "currentTab": 12
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -277,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "WatchTower.md",
+                "file": "importlib.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -287,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for WatchTower"
+              "title": "Backlinks for importlib"
             }
           },
           {
@@ -361,35 +193,36 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "0322e0c0d9cc00d8",
+  "active": "ec2a9d7e3ddf265a",
   "lastOpenFiles": [
+    "LearningPython.md",
+    "importlib.md",
     "ECC.md",
     "CS_Fundamentals.md",
-    "WatchTower.md",
-    "Docker.md",
-    "Github_Action.md",
-    "Github.md",
-    "data_plane.md",
-    "control_plane.md",
-    "Github_Workflow.md",
+    "Text Emojis.md",
+    "cryptography.md",
     "Software.md",
+    "Authentication_and_Authorization.md",
+    "Networks.md",
+    "control_plane.md",
+    "Github.md",
+    "Docker.md",
+    "WatchTower.md",
+    "Github_Action.md",
+    "data_plane.md",
+    "Github_Workflow.md",
     "Link_Layer.md",
     "images/Network_link_layer_data_center_highly_interconnected_network.png",
     "images/Network_link_layer_data_center_network.png",
     "Excalidraw/Drawing 2025-10-04 18.14.13.excalidraw.md",
     "Wireless_and_Mobile_Network.md",
-    "Networks.md",
     "().md",
     "network_layer.md",
     "hashlib.md",
     "Untitled.canvas",
-    "LearningPython.md",
     "JSON_Web_Token_JWT.md",
-    "Authentication_and_Authorization.md",
     "OAuth 2.0.md",
     "AESGMC.md",
-    "cryptography.md",
-    "Text Emojis.md",
     "Untitled.base",
     "Untitled 4.base",
     "Untitled 3.base",
@@ -398,7 +231,6 @@
     "autoinstall.md",
     "images/Cubic_Generate_Page.png",
     "images/QEMU_setup_6.png",
-    "linux.md",
     "images/QEMU_setup_9.png",
     "images/QEMU_setup_8.png",
     "images/QEMU_setup_7.png",

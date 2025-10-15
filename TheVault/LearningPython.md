@@ -21,6 +21,7 @@ Beginning of python learning
 - [[json]]
 - [[subprocess]]
 - [[hashlib]]
+- [[importlib]]
 ---
 - `sort`
 ```python
@@ -95,3 +96,71 @@ print(isinstance(x, str)) # True
 print(isinstance(x, object)) # True
 print(isinstance(x,tuple)) # False
 ```
+
+- A simple approach to setup `dev` and `prod` configurations
+	- setup a simple environment variable `ENVIRONMENT` and set it's value either `DEV` or `PROD` as per your project stage
+	- navigate to the folder where your code resides, example `src`
+	- make a `config` folder in there and navigate to that folder
+	- follow the commands
+	```bash
+	# /src/config
+	$ touch dev_settings.py
+	$ touch prod_settings.py
+	$ touch central_config.py
+	```
+	- in the `dev_settings` and `prod_settings` file, put the config variables you want to have different versions in `dev` and `prod` settings. example
+	```python
+	# dev_settings.py
+	FP_BACKEND_BASE_URL = "https://dev.api.falsch-parker.ch"
+	BOXENV_PATH = "/etc/box/box.env"
+	
+	# prod_settings.py
+	FP_BACKEND_BASE_URL = "https://api.falsch-parker.ch"
+	BOXENV_PATH = "/workdir/env/box.env"
+```
+	- **Same variables must be there in both the files**
+	- Follow the `central_config.py`
+	```python
+	from importlib.util
+	import os
+	
+	# --- START: Stub for Static Analysis ---
+	# These variables will be dynamically overwritten below,
+	# but defining them here removes the red squiggly lines.
+	# all the variables in dev_settings and prod_settings must
+	# be defined here with any irrelevant stub value 
+	FP_BACKEND_BASE_URL: str = "https://api.falsch-parker.ch" # Example stub value
+	BOXENV_PATH = "/workdir/env/box.env" # Example stub value
+	# --- END: Stub for Static Analysis -----
+	
+	ENV = os.environ.get("ENVIRONMENT", "DEV").lower()
+	settings_module_name = f"{ENV}_settings"
+	settings_module = None
+	try:
+		settings_spec = importlib.util.find_spec(settings_module_name, package=__package__)
+		if settings_spec is None:
+			raise ModuleNotFoundError("Text you want here")
+		settings_module = importlib.util.module_from_spec(settings_spec)
+		settings_spec_loader = settings_spec.loader
+		if settings_spec_loader is None:
+			raise ModuleNotFoundError("Text you want here")
+		settings_spec_loader.exec_module(settings_module)
+	except ModuleNotFoundError:
+		raise
+	
+	for attr in dir(settings_module):
+		if not attr.startswith("__"):
+			globals()[attr] = getattr(settings_module, attr)
+			# globals() give the dictionary of global variables
+			# and we are adding all the variables from a particular
+			# (dev or prod)_settings and  can be accessed with
+			# from this file
+	
+	CURRENT_ENV = ENV
+	
+	#################
+	# any_file.py
+	from src.config.central_config import FP_BACKEND_BASE_URL
+	
+	# use the variable as you want
+	```

@@ -27,16 +27,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "importlib.md",
+                "file": "Software.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "importlib"
+              "title": "Software"
+            }
+          },
+          {
+            "id": "793c9e0fe5bdd437",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "linux"
+            }
+          },
+          {
+            "id": "800652a796ddf049",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "xorisso.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "xorisso"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -109,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "importlib.md",
+                "file": "xorisso.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for importlib"
+              "title": "Backlinks for xorisso"
             }
           },
           {
@@ -193,15 +221,18 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ec2a9d7e3ddf265a",
+  "active": "800652a796ddf049",
   "lastOpenFiles": [
-    "LearningPython.md",
+    "linux.md",
+    "xorisso.md",
+    "Software.md",
+    "autoinstall.md",
     "importlib.md",
+    "LearningPython.md",
     "ECC.md",
     "CS_Fundamentals.md",
     "Text Emojis.md",
     "cryptography.md",
-    "Software.md",
     "Authentication_and_Authorization.md",
     "Networks.md",
     "control_plane.md",
@@ -221,14 +252,11 @@
     "hashlib.md",
     "Untitled.canvas",
     "JSON_Web_Token_JWT.md",
-    "OAuth 2.0.md",
-    "AESGMC.md",
     "Untitled.base",
     "Untitled 4.base",
     "Untitled 3.base",
     "Untitled 2.base",
     "Untitled 1.base",
-    "autoinstall.md",
     "images/Cubic_Generate_Page.png",
     "images/QEMU_setup_6.png",
     "images/QEMU_setup_9.png",

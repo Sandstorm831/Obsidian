@@ -1,4 +1,5 @@
 - [[autoinstall]]
+- [[xorisso]]
 - [[systemd]]
 
 | Common Filesystems | Mount tool or command |

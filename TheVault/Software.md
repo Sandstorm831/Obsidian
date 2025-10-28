@@ -14,6 +14,7 @@ The beginning of everything.
 - [[environement_variables]]
 - [[Authentication_and_Authorization]]
 - [[Github]]
+- [[Curl]]
 
 - `base64` is used to turn binary data into `ASCII` characters, it uses
 ```

@@ -15,8 +15,10 @@ def multi_proc(func):
 				queue.put((False, e))
 		sub_proc = Process(target=f, args = (ipc_queue, *args), kwargs=kwargs)
 		sub_proc.start()
+		status, res = ipc_queue.get() # .get() before .join() ensures  
+										# simultaneous consuming and avoiding
+										# deadlocks
 		sub_proc.join()
-		status, res = ipc_queue.get()
 		ipc_queue.close()
 		if status:
 			return res
@@ -43,3 +45,5 @@ while True:
 		sleep(0.1)
 		continue
 ```
+
+- **Queue is not a store for data but a pipe/gate for IPC**, You can't put all the objects in the **Queue** at once and then take the object out. You have to simultaneously put and take objects out. There should be a *consumer* waiting the *producer* to put the objects in the queue.

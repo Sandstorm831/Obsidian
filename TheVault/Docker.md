@@ -111,3 +111,16 @@ docker image rm $(docker image ls -q)
 ```bash
 docker volume rm $(docker volums ls -q)
 ```
+- To look the content of the volume, you can launch a `alpine` container and attach the volume to it
+	```bash
+docker run --rm -it -v <VOLUME_NAME>:/vol_data alpine sh
+```
+	This method is primarily for windows as in `linux` docker run native unlike windows where docker uses `wsl`. 
+	- `--rm`: removes the container after being used
+	- `alpine`: image name
+
+- If you want to transfer the data to your own system you can mount a folder of your file-system as volume alongside the original `Volume` you want to copy and then copy the data from one volume to another
+	```bash
+docker run --rm -it -v <VOLUME_NAME>:/vol_data -v ${PWD}:/backup alpine sh -c "cp -r /vol_data/* /backup/"
+```
+	This is primarily for Windows as in Linux the data resides in your system only.

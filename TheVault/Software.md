@@ -15,6 +15,7 @@ The beginning of everything.
 - [[Authentication_and_Authorization]]
 - [[Github]]
 - [[Curl]]
+- [[Git]]
 
 - `base64` is used to turn binary data into `ASCII` characters, it uses
 ```

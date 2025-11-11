@@ -1,3 +1,4 @@
+- [[find_command]]
 - To run a program in a detached window and redirect it's output to null
 	```bash
 <run_command_for program> > /dev/null 2>&1 &

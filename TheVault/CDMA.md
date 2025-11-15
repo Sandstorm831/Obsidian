@@ -1,0 +1,8 @@
+- Each data bit sent is encoded by multiplying by a signal (code) that changes at a much faster rate ( known as **chipping rate** ) than the data bit rate. Here we show a very simplified version of data bit and code (signal) bit. ![[data_bit_rate_and_code_bit_rate.excalidraw]]
+- Now, let's assume the data bit as $d_{i}$ and code bit. 
+- Each time slot is divided into $M$ mini slots, in figure above $M=10$.
+- The `CDMA` code consists of a sequence of $M$ values, $c_{m},\space m = 1,\dots,M$ each taking a value of +1 or -1. In the above example $c=\{1,1,-1,1,-1,-1,1,-1,1,1\}$
+- To get the encoded data bit $Z_{i,m}$, we multiply $d_{i}$ with $m^{th}$ bit in the assigned `CDMA` code $$Z_{i,m} = d_{i} \cdot c_{m}$$
+- If the receiver receives the encoded bits (can be interfered), it can recover the original data bit, $d_{i}$ simply by $$d_{i} = \frac{1}{m} \sum_{m=1}^{M}Z_{i,m}\cdot c_{m}$$  
+- Here is a example of `CDMA` without interference ![[CDMA_without_interference.png]]
+- Here is an example of `CDMA` with interference from other signal ![[CDMA_with_interference.png]]

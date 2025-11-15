@@ -6,7 +6,7 @@ Multi-Access Protocols:
 - Channel Partitioning Protocol:
 	- Time Division Multiplexing (TDM): each node is assigned a slot only the transmission is possible
 	- Frequency Division Multiplexing (FDM): each node is assigned a frequency band for transmission
-	- Code Division Multiple Access (CDMA): allows simultaneous transmission due to assigning of different `codes` to different nodes. detail in [[Wireless_and_Mobile_Network]]
+	- Code Division Multiple Access (CDMA): allows simultaneous transmission due to assigning of different `codes` to different nodes. detail in [[CDMA]]
 - Random-Access Protocol: 
 	- slotted ALOHA: 
 		- time is divided into slots: slot size = L/R (frame_size/transmission_rate)

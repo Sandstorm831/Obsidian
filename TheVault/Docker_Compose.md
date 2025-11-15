@@ -72,3 +72,34 @@ docker compose restart <name_of_service>
 ```bash
 docker compose exec <service_name> <command>
 ```
+
+- To pass in secrets to docker-compose without hard-coding them, you can use two methods
+	- create a `.env` file in the same folder as of `docker-compose.yml` and have the following structure.
+		```env
+		########## .env #############
+		POSTGRES_USER=myuser
+		POSTGRES_PASSWORD=secret
+		
+		######### docker-compose.yml ##########3
+		services:
+		  db:
+		    image: postgres
+		    environment:
+		      - POSTGRES_USER=${POSTGRES_USER}
+		      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+		```
+	- create a external `env` file and pass the example: `secrets.env` file, in the same folder as of `docker-compose.yml` and have the following structure.
+		```env
+		########## secrets.env #############
+		POSTGRES_USER=myuser
+		POSTGRES_PASSWORD=secret
+		
+		######### docker-compose.yml ##########3
+		services:
+		  db:
+		    image: postgres
+		    env_file:
+		      - secrets.env
+		    environment:
+		      - POSTGRES_USER=${POSTGRES_USER}
+		      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}

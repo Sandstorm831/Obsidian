@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "find_command.md",
+                "file": "Docker_Compose.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "find_command"
+              "title": "Docker_Compose"
             }
           }
         ],
@@ -179,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "find_command.md",
+                "file": "Docker_Compose.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +189,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for find_command"
+              "title": "Backlinks for Docker_Compose"
             }
           },
           {
@@ -265,13 +265,13 @@
   },
   "active": "d4b7c4e85f89e1b2",
   "lastOpenFiles": [
-    "Bourne_Again_SHell.md",
-    "find_command.md",
-    "LearningPython.md",
+    "Docker.md",
     "Git.md",
+    "find_command.md",
+    "Bourne_Again_SHell.md",
+    "LearningPython.md",
     "Software.md",
     "Github.md",
-    "Docker.md",
     "Multiprocessing.md",
     "Curl.md",
     "xorisso.md",

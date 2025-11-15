@@ -32,3 +32,17 @@
 	```bash
 	git rebase --continue
 	```
+
+- To revert a commit, you can run
+	```bash
+git reset --hard HEAD~1
+	```
+	This will delete the commit and all the changes done in that permanently so use it only when you really don't want to keep any change in that commit.
+
+- To copy a commit from branch `A` to branch `B` you can use `git cherry-pick` as follows
+	```bash
+git log A # prints history of branch A, copy the hash of commit
+git checkout B # switch to the branch B
+git cherry-pick <commit-hash>
+	```
+	It will copy the commit whose `hash` is presented from branch `A` to `B`, but the commit still remains on branch `A`

@@ -1,0 +1,43 @@
+- There 2 types of cryptography
+	- Symmetric cryptography: encryption and decryption are done by same key. It's examples are `AES`, `3DES` (triple `DES`). Both of these are Block ciphers as they process the data in blocks.
+	- Asymmetric cryptography: encryption is done by public key and decryption is done by private key. It's examples are `RSA`, `ECC`. Let's represent public and private key of Bob as $K^{+}_{B}$ and $K_{B}^{-}$, encrypted message($m$)is represented as $K^{+}_{B}(m)$ and decryption of encrypted message is represented as $K^{-}_{B}(K^{+}_{B}(m)) = m$
+- Asymmetric cryptography is generally is computationally intensive, so it's used in combination of symmetric cryptography. To send data, bob encrypts the data using a symmetric key called as session key $K_{s}$. This session key ($K_{s}$) is then encrypted by the public of the person to which the data have to be send, i.e., public key of Alice $K^{+}_{A}(K_{s})$ and then sent to Alice. Alice decrypts the session key $K^{-}_{A}(K^{+}_{A}(K_{s})) = K_{s}$ and now both can use symmetric key cryptography.
+- Hash functions takes an input $m$ and computes a fixed size string $H(m)$ known as hash. Cryptographic hash function required to have following additional property ***It is computationally infeasible to find any two different messages x and y such that $H(x) = H(y)$.*** Popular examples are `MD5` and `SHA1`
+- Message Authentication Codes (MAC) is used for integrity checks of the messages. Both Alice and Bob needs to have a shared secret which is called **authentication key** represented by $s$. Alice creates a message $m$, attaches $s$ to create $m+s$, calculates it's hash $H(m+s)$, this hash is called message authentication code (MAC). Alice then appends MAC along with the message $(m, H(m+s))$ to create an extended message and send to Bob. Bob on receiving the extended message $(m,h)$ extracts the message $m$, attaches the **authentication key** $s$ and calculates it's Hash $H(m+s)$. If $H(m+s) = h$, means everything is fine. The most popular standard today is **`HMAC`** which stands for Hashed MAC. `HMAC` usually runs the data and authentication key twice through the hash function ![[message_authentication_code_MAC_flow.excalidraw]]
+- Digital Signatures are used to ascertain that the message is indeed from the person it claim to be from. To get a efficient signature of a message, we take message $m$, use hash function to get a short-hand version of the message $H(m)$, encrypts the message using private key of the user (Bob) $K^{-}_{B}(H(m))$ which is the digital signature of message m. It's then concatenated with original message $m$ to form $(m, K^{-}_{B}(H(m)))$ and sent to Alice. Alice takes out the original message $m$, and takes it's hash $H(m)$, additionally Alice takes the public key of Bob $K^{+}_{B}$ and encrypts the signed hash with the public key $K^{+}_{B}(K^{-}_{B}(H(m)))$ to obtain the original hash of the message $m$. If $$K^{+}_{B}(K^{-}_{B}(H(m))) = H(m)$$ then the signature is verified and message indeed belong to bob ![[Digital_signature_flow.excalidraw]]
+- To verify that a public key is of the same person as it is claimed to be, CA Certificates are issued. These certificates are issued by CA (certification authority) and ties the existence of public key to it's claimed owner and can be verified.
+- playback attack is used to replay message already transferred from Alice and Bob and cause trouble. Trudy just needs to eavesdrop to the message and then re-transmit the message after sometime. To prevent these attacks we can use nonce which is a number that a protocol will use once in a lifetime. It can be used in the following steps:
+	1. Alice sends a message to Bob
+	2. Bob generates a nonce $R$ and sends to Alice
+	3. Alice encrypts the nonce $R$ with Bob's symmetric key $(K_{A-B})$ and sends $K_{A-B}(R)$ back to Bob
+	4. Bob decrypts the message and compares the nonce sent to the Alice, if both are same than Alice is authenticated and live
+
+- PGP (pretty good privacy): It's a e-mail encryption scheme that provides confidentiality, sender authentication, and message integrity. it's basic steps are as follows
+	- Alice (sender)
+		1. message $m$ is hashed and then encrypted using Alice's private key to get a signed hash of the message $K^{-}_{A}(H(m))$
+		2. signed hash is concatenated with original message to form extended packet $(m,K^{-}_{A}(H(m)))$
+		3. this extended packed is then encrypted using a session key (symmetric cryptographic key) to obtain a encrypted message $K_{s}((m,K^{-}_{A}(H(m))))$
+		4. same session key is encrypted using **Bob's** public key to obtain a encrypted session key $K^{+}_{B}(K_{s})$
+		5. encrypted message and session key are concatenated and sent to the Bob
+	- Bob (receiver)
+		1. extracts the encrypted session key $K^{+}_{B}(K_{s})$ and decrypts using his own $K_{B}^{+}$ public key to obtain session key $K_{s}$
+		2. uses session key to decrypt the encrypted message to obtain the original message and the digital signature of the message
+		3. bob encrypts the digital signature using **Alice's** public key to obtain hash of the original message and he also calculates the hash of the message received
+		4. If the hash of both matches then Alice is authenticated and message integrity is also checked. Whereas Encryption is also set as Bob received the session key
+	![[PGP_encryption_scheme_flow.excalidraw]]
+
+- `TLS` (transport layer security): `TLS` is security layer sits within Application layer (it's a transport layer protocol from a developer's perspective) and secures `TCP` protocol. It provides Confidentiality, Data Integrity, Server authentication, and client authentication. `TLS` has 3 phases
+	1. Handshake: during handshake phase Bob needs to 
+		- establish `TCP` connection with Alice: normal `TCP` handshake
+		- verify Alice is really Alice: Bob sends Alice a `TLS` hello message and Alice responds with her certificate which contains her public key verifying Alice's public key
+		- send Alice master key: Bob then generates a Master Secret (MS) encrypts the MS with Alice's public key to create a Encrypted Master Secret (EMS) and send to Alice. Alice decrypts EMS to obtain MS
+		also, during handshake phase Alice and Bob send `nonces` to each other which are used in creation of 4 session keys which prevents **connection replay attacks**, that is, Trudy can replay all the messages right from the Handshake phase and without any `nonces` everything will seem fine and will pass all integrity checks. Adding `nonces` will lead to different session keys thus encryption and integrity checks will fail.
+		There are a few other steps also in a real `TLS` Handshake, but it's a good enough simplified version for understanding
+	2. Key Derivation: Both Alice and Bob now possess MS, which they use to create 4 session keys
+		1. $E_{B}$: session encryption key for data sent from Bob to Alice
+		2. $E_{A}$: session encryption key for data sent from Alice to Bob
+		3. $M_{B}$: session `HMAC` key for data sent from Bob to Alice
+		4. $M_{A}$: session `HMAC` key for data sent from Alice to Bob
+	3. Data Transfer: `TLS` breaks the data stream into records, attaches their `HMAC` (here `HMAC` contains a sequence number of message alongside original message and `HMAC` key, it is done to prevent any man-in-the-middle attacks which can change the order, delete segments or replays the segments. Remember that in these attacks Trudy also changes the sequence number necessary for `TCP` thus it is not detected at any level. These sequence numbers in the `HMAC` will cause integrity checks to fail for any kind of altering with packet or replays) to the record. Bob uses $M_{B}$ to calculate `HMAC` for the record. Then the package $(record + HMAC)$ is then encrypted using key $E_{B}$. This Encrypted package then passed to the `TCP` for secure transmission.![[TLS_Record_structure.excalidraw]]
+
+- `IPSec` and Virtual Private Networks (`VPN`): IP Security protocol or `IPSec` provides security layer at the network layer. It secures datagrams between two network layer entities including hosts and routers. `IPSec` is used primarily to create virtual private networks (`VPN`) that run over public internet. `IPSec` encrypts the data payload at the source till the destination, thus the payload will be completely hidden from anyone sniffing the network. Thus creating a **virtual** private network (`VPN`). It's a very brief and simplistic view of how `VPN` does under the hood.

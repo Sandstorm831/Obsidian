@@ -1,3 +1,4 @@
+- [[Omarchy]]
 - [[autoinstall]]
 - [[xorisso]]
 - [[systemd]]

@@ -57,3 +57,23 @@ git rm <PATH_TO_FILE>
 # if you want to remove a folder
 git rm -r --cached <PATH_TO_FOLDER>
 ```
+
+- Adding essential global configurations
+	```bash
+	git config --global user.name "<YOUR NAME>" # configures your name
+	git config --global user.email your_email@example.com # configures your email
+	git config --global gpg.format ssh
+	# configures key format for signing, default is "openpgp", possible
+	# values are "ssh", "x509" and "openpgp"
+	git config --global user.signingKey <PATH_TO_SSH_PUBLIC_KEY>
+	# it is path for ssh key format, can be different for other key formats
+	git config --global commit.gpgsign true
+	# auto-enalbles signing on all commits
+	git config --list --show-origin
+	# list all the git config options set with their origin file path
+	```
+
+- Check if commits have signatures
+	```bash
+git log --show-signature
+	```

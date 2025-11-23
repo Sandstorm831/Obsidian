@@ -73,6 +73,27 @@ git rm -r --cached <PATH_TO_FOLDER>
 	# list all the git config options set with their origin file path
 	```
 
+- If you choose to sign commits using `ssh` follow these steps
+	```bash
+	ssh-keygen -t ed25519 -C your_email@example.com
+	# add the public key to github
+	git config --global gpg.format ssh
+	git config --global user.signingKey <PATH_TO_SSH_PUBLIC_KEY>
+	git config --global commit.gpgsign true
+	
+	# For ssh, we have to create
+	# an additional allowed signers file
+	cd ~/.config/git/
+	# if git directory doesn't exist make one using mkdir git
+	touch allowed_signers
+	vim allowed_signers
+	# add ssh public key in the following format
+	# <identity> <ssh-public-key>
+	# example
+	# your_email@example.com ssh-ed25519 AAAA....
+	git config --global gpg.ssh.allowedSignersFile ~/.config/git/allowed_signers
+	```
+
 - Check if commits have signatures
 	```bash
 git log --show-signature

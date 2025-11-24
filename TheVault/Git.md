@@ -47,16 +47,18 @@ git cherry-pick <commit-hash>
 	```
 	It will copy the commit whose `hash` is presented from branch `A` to `B`, but the commit still remains on branch `A`
 
+
 - To stop tracking a file you are already tracking, adding in `.gitignore` won't be enough. Run the following command to stop tracking the file
-```bash
-git rm --cached <PATH_TO_FILE> # This will stop tracking the file
-# it removes the file from git index
-# if you want to remove the file from your working directory too
-# then remove --cached option
-git rm <PATH_TO_FILE>
-# if you want to remove a folder
-git rm -r --cached <PATH_TO_FOLDER>
-```
+	```bash
+	git rm --cached <PATH_TO_FILE> # This will stop tracking the file
+	# it removes the file from git index
+	# if you want to remove the file from your working directory too
+	# then remove --cached option
+	git rm <PATH_TO_FILE>
+	# if you want to remove a folder
+	git rm -r --cached <PATH_TO_FOLDER>
+	```
+   
 
 - Adding essential global configurations
 	```bash

@@ -2,6 +2,7 @@
 - [[autoinstall]]
 - [[xorisso]]
 - [[systemd]]
+- [[useradd]]
 
 | Common Filesystems | Mount tool or command |
 | :----------------: | --------------------: |

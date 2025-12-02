@@ -16,6 +16,7 @@ The beginning of everything.
 - [[Github]]
 - [[Curl]]
 - [[Git]]
+- [[WebDev]]
 
 - `base64` is used to turn binary data into `ASCII` characters, it uses
 ```

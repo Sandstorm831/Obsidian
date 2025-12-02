@@ -100,3 +100,15 @@ git cherry-pick <commit-hash>
 	```bash
 git log --show-signature
 	```
+
+- To merge the branch `A` into branch `B`, such that for all the merge conflicts that Git encounters
+	-  Git should side with branch `A`
+	```bash
+git checkout B
+git merge -X their A
+	```
+	- Git should side with branch `B`
+	```bash
+	git checkout B
+	git merge -X ours A
+	```

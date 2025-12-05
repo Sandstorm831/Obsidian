@@ -1,6 +1,6 @@
 - [Storage](storage)
 - [Single_Board_Computer](Single_Board_Computers)
-
+- [[Cloud_Providers]]
 
 - difference between `x86`, `x86_64`m `x64` and `arm` based processor architectures
 

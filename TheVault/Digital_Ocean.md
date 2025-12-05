@@ -1,0 +1,3 @@
+- Easy to setup
+- Great Docs
+- Managed DB

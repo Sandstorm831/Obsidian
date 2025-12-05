@@ -1,0 +1,5 @@
+- Cheapest high-quality cloud
+- fast NVMe servers
+- very simple UI
+- stable pricing
+- Data-centres in EU only

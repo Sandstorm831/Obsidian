@@ -29,3 +29,21 @@ $ sudo mount -t <fstype> /dev/<name> /media/<mount_folder>
 	```
 	- `-t` -> tells the `file-system` type
 	- `/dev/<name>` -> Linux represent hardware as files and device files live in `/dev/`
+
+- To find size of files and folders:
+	- size of a folder
+		```bash
+		du -sh /path/to/folder
+		```
+		- `-s`: summarise (don't list all sub-directories)
+		- `-h`:  human-readable (e.g., KB, MB, GB)
+	- to show size of all the sub-folders and the parent folder in an ascending order
+		```bash
+		du -h --max-depth=1 /path/to/folder/ | sort -h
+		```
+		- `--max-depth`: list sizes of folder and it's immediate sub-folders only
+		- `sort -h`: sorts by human readable way
+	- to show all the items in the folders in ascending manner
+		```bash
+		du -sh /path/to/folder/* | sort -h
+		```

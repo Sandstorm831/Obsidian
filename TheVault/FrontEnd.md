@@ -1,4 +1,7 @@
 - [[Bezier]]
+- [[Tailwind_CSS]]
+- [[React]]
+- [[TypeScript-JavaScript]]
 ---
 - For creating an effect in which element needs to appear like `coming from behind the wall`, use `overflow-hidden` tailwind CSS property. This way the moving element will not interfere with other elements positioning in any way. Here is an example of simple animation with Text Sliding up
 ```ts
@@ -43,4 +46,13 @@ function RevealText({
 | `lvh` | Large Viewport Height  | Tall                           | Tall (bar hidden)                        |
 | `dvh` | Dynamic Viewport Height| Changes with bar               | Dynamically switches between `lvh` and `svh` |
 
-- 
+- In the `<a></a>` tags always remember to apply `rel` and `target` properties
+```html
+<a
+rel="noopener noreferrer"
+target="_blank"
+href="https://google.com" >
+Google
+</a>
+```
+

@@ -112,3 +112,10 @@ git merge -X their A
 	git checkout B
 	git merge -X ours A
 	```
+
+- To remove all the changes from the working tree
+	```bash
+	git restore .    # discard all the unstaged changes in tracked files
+	git clean -fd    # discard all untracked files and directories
+	```
+	

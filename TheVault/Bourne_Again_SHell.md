@@ -47,3 +47,12 @@ $ sudo mount -t <fstype> /dev/<name> /media/<mount_folder>
 		```bash
 		du -sh /path/to/folder/* | sort -h
 		```
+
+- To start a shell as another user
+	```bash
+sudo -i -u <USER>
+# example
+sudo -i -u postgres
+	```
+	- `-i`: start a login shell, it loads environment as if `<USER>` itself logged in
+	- `-u <USER>`: specify the target user

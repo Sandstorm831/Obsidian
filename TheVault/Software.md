@@ -4,7 +4,6 @@ The beginning of everything.
 - [AuthJS](AuthJS)
 - [Docker](Docker)
 - [SQLite](SQLite)
-- [PostgreSQL](PostgreSQL)
 - [Bash](Bourne_Again_SHell)
 - [Computer Science Fundamentals](CS_Fundamentals)
 - [Music](Music)
@@ -18,6 +17,7 @@ The beginning of everything.
 - [[Git]]
 - [[WebDev]]
 - [[Cloud_Providers]]
+- [[Database]]
 
 - `base64` is used to turn binary data into `ASCII` characters, it uses
 ```

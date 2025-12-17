@@ -50,4 +50,4 @@
 		```
 	- now you exit the `psql` and exit the `postgres` user and to the original user. Now you are able to login to the `postgres` with `psql` command
 
-- 
+- [[Integers]]

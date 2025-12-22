@@ -52,3 +52,4 @@
 
 - [[Integers]]
 - [[Arbitrary_precision_numbers]]
+- [[Floating_point]]

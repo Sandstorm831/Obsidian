@@ -26,6 +26,11 @@
 	whereas, you can understand `IN` as equivalent to `= ANY`, and `ANY` is more efficient. 
 	
 	The case where both `IN` and `ANY` differ is [here](https://www.postgresql.org/docs/17/functions-comparisons.html) 
+-  To generate series in Postgres, use this function
+```sql
+generate_series(inittial, final) --> function to generate series from initial value to final value
+```
+
 ---
 
 - A PostgreSQL Instance structure looks like this ![[postgres1.excalidraw]]
@@ -53,3 +58,4 @@
 - [[Integers]]
 - [[Arbitrary_precision_numbers]]
 - [[Floating_point]]
+- [[Money]]

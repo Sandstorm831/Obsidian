@@ -59,3 +59,4 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[Arbitrary_precision_numbers]]
 - [[Floating_point]]
 - [[Money]]
+- [[NANs_and_Infinity]]

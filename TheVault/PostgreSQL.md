@@ -60,3 +60,4 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[Floating_point]]
 - [[Money]]
 - [[NANs_and_Infinity]]
+- [[Casting_types]] 

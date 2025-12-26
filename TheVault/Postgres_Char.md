@@ -1,0 +1,5 @@
+- Don't use it, as smaller length character string get padded to the fixed length
+- Bigger length strings will throw error
+- Storage can take a hit as storing all those paddings unnecessarily
+- Performance can take a hit because of appending and removing all those paddings
+- Different operators view paddings differently so there's no intuitive way to use CHAR

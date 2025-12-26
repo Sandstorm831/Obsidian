@@ -55,9 +55,6 @@ generate_series(inittial, final) --> function to generate series from initial va
 		```
 	- now you exit the `psql` and exit the `postgres` user and to the original user. Now you are able to login to the `postgres` with `psql` command
 
-- [[Integers]]
-- [[Arbitrary_precision_numbers]]
-- [[Floating_point]]
-- [[Money]]
-- [[NANs_and_Infinity]]
-- [[Casting_types]] 
+
+- [[Postgres_Numeric_Types]]
+- [[Postgres_Character_types]]

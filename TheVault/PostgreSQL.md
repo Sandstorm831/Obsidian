@@ -58,3 +58,4 @@ generate_series(inittial, final) --> function to generate series from initial va
 
 - [[Postgres_Numeric_Types]]
 - [[Postgres_Character_types]]
+- [[Check_Constraint]]

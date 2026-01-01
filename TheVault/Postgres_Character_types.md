@@ -6,3 +6,9 @@
 - fixed length `CHAR`, might be the worst performing character-type among all the three character-types
 
 - [[Postgres_Char]]
+- [[Postgres_Character_Varying]]
+- [[Postgres_Text]]
+
+In order of preferences for use of character_types:
+	`TEXT` > `CHARACTER VARYING`
+don't use fixed length `CHAR`

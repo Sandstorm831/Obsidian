@@ -1,0 +1,2 @@
+- Used to store a arbitrary length of characters.
+- if the length of the text becomes too large, and crosses a certain limit, than it takes that large chunk of `text` and splits it into different rows. It is done as `Postgres` as fixed `page` size and a row is not allowed to span multiple pages so to accommodate oversized elements this is the technique used. It is called `TOAST` (The Oversized-Attribute Storage Technique)

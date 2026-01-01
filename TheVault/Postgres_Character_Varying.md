@@ -1,0 +1,4 @@
+- `VARCHAR` is an alias
+- Accepts a number as an argument for the length of the string of characters that will be acceptable
+- it doesn't pad as fixed length `CHAR`
+- an unbounded `VARCHAR` is exactly equivalent to `TEXT` both performance wise and storage wise

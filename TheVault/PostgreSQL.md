@@ -61,3 +61,4 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[Check_Constraint]]
 - [[Domains]]
 - [[Character_sets_and_collations]]
+- [[Binary_data]]

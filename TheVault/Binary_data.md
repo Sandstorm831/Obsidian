@@ -51,3 +51,39 @@
    hello.txt | Hello World
   (1 row)
 	```
+
+- A simple `md5` hash of a string can be calculated as follows
+	```sql
+  >>> SELECT md5('hello world');
+                 md5
+  ----------------------------------
+   5eb63bbbe01eeed093cb22bb8f5acdc3
+  (1 row)
+	```
+	`MD5` is not secure, do not use `md5` anywhere security, cryptographic security, password etc.
+
+- Super fast to calculate digests and hashes. Can use that for strict `equality lookups` as it's `superfast`
+- default output of `md5` is `TEXT`, whereas, default output of `sha256` is a `byte-array`
+	```sql
+  >>> SELECT pg_typeof(md5('hello world'));
+   pg_typeof
+  -----------
+   text
+  (1 row)
+
+  >>> SELECT pg_typeof(sha256('hello world'));
+   pg_typeof
+  -----------
+   bytea
+  (1 row)
+	```
+
+- You can convert the `md5` to a `bytea` output
+	```sql
+  >>> SELECT pg_typeof(decode(md5('hello world'), 'hex'));
+   pg_typeof
+  -----------
+   bytea
+  (1 row)
+	```
+

@@ -87,3 +87,60 @@
   (1 row)
 	```
 
+- There's a little `bytea` storage overhead, so if you check the size of the column, you will get more than `16 bytes` (`128 bit` output size of `md5`) as opposed to `16 byte` output of `md5` hash
+	```sql
+  >>> SELECT pg_column_size(decode(md5('hello world'), 'hex'));
+   pg_column_size
+  ----------------
+               20
+  (1 row)
+	```
+
+- `bytea` (hex) output of `md5` is considerably smaller as compared to the default `TEXT` output
+	```sql
+  >>> SELECT pg_column_size(decode(md5('hello world'), 'hex')), pg_column_size(md5('hello world'));
+  pg_column_size | pg_column_size
+  ----------------+----------------
+              20 |             36
+  (1 row)
+	```
+
+- We can cast `md5` hash to `UUID` (both are `16 bytes` long), this actually saves `4 byte` of space imposed by `BYTEA` storage overheads
+	```sql
+  >>> SELECT decode(md5('hello world'), 'hex');
+                decode
+  ------------------------------------
+  \x5eb63bbbe01eeed093cb22bb8f5acdc3
+  (1 row)
+
+  >>> SELECT md5('hello world')::uuid;
+                  md5
+  --------------------------------------
+  5eb63bbb-e01e-eed0-93cb-22bb8f5acdc3
+  (1 row)
+	```
+you can see dashes are introduced after casting it into `UUID` but overall it's same
+  ```sql
+  >>> SELECT pg_column_size(md5('hello world')::uuid);
+   pg_column_size
+  ----------------
+               16
+  (1 row)
+
+  >>> SELECT pg_column_size(decode(md5('hello world'), 'hex'));
+   pg_column_size
+  ----------------
+               20
+  (1 row)
+  ```
+
+- So you can see `UUID` is smaller representation of `md5` hash
+	```sql
+  >>> SELECT pg_column_size(md5('hello world')::uuid),
+  >>>     pg_column_size(decode(md5('hello world'), 'hex')),
+  >>>     pg_column_size(md5('hello world'));
+  pg_column_size | pg_column_size | pg_column_size
+  ----------------+----------------+----------------
+              16 |             20 |             36
+  (1 row)
+	```

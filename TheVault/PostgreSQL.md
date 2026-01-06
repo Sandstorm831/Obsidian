@@ -62,3 +62,4 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[Domains]]
 - [[Character_sets_and_collations]]
 - [[Binary_data]]
+- [[UUID]]

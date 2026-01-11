@@ -186,3 +186,46 @@ since we inserted the values `happy`, `sad`, `neutral` in this order in the `ENU
   16520 |     16510 |             4 | excited
 	```
 	the `.5` and `.75` are here because we inserted these values in the middle
+
+- If you want to know the intial order of the values in the enum, you can use
+	```sql
+  >>> SELECT enum_range(null::mood);
+                    enum_range
+  ------------------------------------------------
+  {happy,afraid,melancholic,sad,neutral,excited}
+  (1 row)
+
+  -- you can get all the values in the current order
+
+  >>> SELECT enum_range(null::mood_new);
+          enum_range
+  ----------------------------
+  {happy,sad,neutral,afraid}
+  (1 row)
+	```
+
+- we can use this `enum_range` to find the order between one value to another value
+	```sql
+  >>> SELECT enum_range(null::mood, 'sad'::mood);
+            enum_range
+  --------------------------------
+  {happy,afraid,melancholic,sad}
+  (1 row)
+  -- here it shows everything from the start upto 'sad' only
+
+  >>> SELECT enum_range('afraid'::mood, 'sad'::mood);
+          enum_range
+  --------------------------
+  {afraid,melancholic,sad}
+  (1 row)
+  -- here it shows everything from 'afraid' to 'sad'
+
+  >>> SELECT enum_range('afraid'::mood, null::mood);
+                  enum_range
+  ------------------------------------------
+  {afraid,melancholic,sad,neutral,excited}
+  (1 row)
+  -- here it shows everything from 'afraid' to the end
+	```
+
+- You don't have to use `ENUM`, you can use `CHECK` constraints with a `TEXT` column instead, you will loose the compactness of the `ENUM`. `CHECK` constraint are easier to deal with and easy to alter, you can also use `DOMAIN` over a `TEXT`column with a `CHECK` Constraint as this would be pretty easy to deal with when values are constantly being added and removed.

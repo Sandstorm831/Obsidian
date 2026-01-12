@@ -65,3 +65,4 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[UUID]]
 - [[Boolean]]
 - [[Enum]]
+- [[TimeStamp]]

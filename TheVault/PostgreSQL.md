@@ -67,3 +67,4 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[Enum]]
 - [[TimeStamp]]
 - [[Timezones]]
+- [[Date_and_Time]]

@@ -138,3 +138,28 @@
 	```
 
 
+- Don't ever use `CURRENT_TIME` as it gives time with `timezone` which you really don't want
+- You can use `LOCALTIME`, it gives you current time without timezone in your timezone (defined in the `TIME ZONE` variable)
+	```sql
+  >>> SELECT LOCALTIME;
+      localtime
+  -----------------
+  06:48:28.570843
+  (1 row)
+
+	```
+
+- You can also get a timestamp in your timezone with `LOCALTIMESTAMP`
+	```sql
+  >>> SELECT LOCALTIMESTAMP;
+        localtimestamp
+  ----------------------------
+  2025-12-31 06:49:12.665156
+  (1 row)
+
+  >>> SELECT PG_TYPEOF(LOCALTIMESTAMP);
+            pg_typeof
+  -----------------------------
+  timestamp without time zone
+  (1 row)
+	```

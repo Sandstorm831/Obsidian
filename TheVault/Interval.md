@@ -44,3 +44,35 @@
     PT5M6S
     (1 row)
 		```
+
+
+- There's an alternate ISO format
+	- It starts with P, followed by 4 digit year, 2 digit month, 2 digit date, T, 2 digit Hour, 2 digit minute and at last 2 digit second, ex: `P0001-02-03T04:05:06`
+		```sql
+	 >>> SELECT 'P0001-02-03T04:05:06'::INTERVAL;
+        interval
+    ----------------
+    P1Y2M3DT4H5M6S
+    (1 row)
+		```
+
+- You can also define `interval` in discrete individual time formats like this
+	```sql
+  >>> SELECT INTERVAL '600' DAY;
+  interval
+  ----------
+  600 days
+  (1 row)
+
+  >>> SELECT INTERVAL '40' MONTH;
+      interval
+  ----------------
+  3 years 4 mons
+  (1 row)
+
+  >>> SELECT INTERVAL '500' MINUTE;
+  interval
+  ----------
+  08:20:00
+  (1 row)
+	```

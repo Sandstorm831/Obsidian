@@ -69,3 +69,4 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[Timezones]]
 - [[Date_and_Time]]
 - [[Interval]]
+- [[Serial]]

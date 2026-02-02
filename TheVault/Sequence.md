@@ -13,3 +13,40 @@
   >>> CACHE 1;
   CREATE SEQUENCE
 	```
+
+- `nextval('my_sq')` : advances the `sequence` and gives back new value regardless of concurrent sessions
+	```sql
+  >>> SELECT nextval('my_sq');
+  nextval
+  ---------
+        1
+  (1 row)
+
+  >>> SELECT nextval('my_sq');
+  nextval
+  ---------
+        2
+  (1 row)
+	```
+
+- `currval('my_sq')` : returns the value most recently obtained by the `nextval` for the sequence in the **CURRENT SESSION**, error will be called if `nextval` is never called for this sequence in **this session**.
+	```sql
+  >>> SELECT nextval('my_sq');
+  nextval
+  ---------
+        8
+  (1 row)
+
+  >>> SELECT currval('my_sq');
+  currval
+  ---------
+        8
+  (1 row)
+
+  -- in a new session
+
+  ❯ psql
+
+  >>> SELECT currval('my_sq');
+  ERROR:  currval of sequence "my_sq" is not yet defined in this session
+	```

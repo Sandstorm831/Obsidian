@@ -71,3 +71,7 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[Interval]]
 - [[Serial]]
 - [[Sequence]]
+- [[Identity]]
+- [[PostgreSQL_Network_Address_Types]]
+- [[PostgreSQL_JSON]]
+- [[PostgreSQL_Array]]

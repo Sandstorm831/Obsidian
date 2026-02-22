@@ -50,3 +50,25 @@
   >>> SELECT currval('my_sq');
   ERROR:  currval of sequence "my_sq" is not yet defined in this session
 	```
+
+- `setval('my_sq', 8)`: Set the sequence to the given number.
+	```sql
+  >>> SELECT setval('my_sq', 3);
+  setval
+  --------
+        3
+  (1 row)
+
+  >>> SELECT currval('my_sq');
+  currval
+  ---------
+        3
+  (1 row)
+
+  >>> SELECT nextval('my_sq');
+  nextval
+  ---------
+        4
+  (1 row)
+	```
+	

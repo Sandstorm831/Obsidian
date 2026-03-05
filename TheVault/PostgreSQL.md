@@ -75,3 +75,6 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[PostgreSQL_Network_Address_Types]]
 - [[PostgreSQL_JSON]]
 - [[PostgreSQL_Array]]
+- [[PostgreSQL_generated_column]]
+- [[PostgreSQL_Text_Search_Types]]
+- [[PostgreSQL_Bit_String]]

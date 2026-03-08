@@ -79,3 +79,7 @@ generate_series(inittial, final) --> function to generate series from initial va
 - [[PostgreSQL_Text_Search_Types]]
 - [[PostgreSQL_Bit_String]]
 - [[PostgreSQL_Range]]
+- [[PostgreSQL_composite_types]]
+- [[PostgreSQL_NOT_NULL]]
+- [[PostgreSQL_unique_constraint]]
+- [[PostgreSQL_Exclusion_Constraint]]
